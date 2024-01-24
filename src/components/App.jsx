@@ -1,21 +1,20 @@
-const Profile = props => {
+import React from 'react';
+import userData from './userData.json';
+import Profile from './Profile';
+import './App.css';
+
+const App = () => {
   return (
-    <div>
-      <img src="" alt="Jacob Mercer" width="180" height="180" />
-      <h2>Jacob Mercer</h2>
-      <p>j.mercer@mail.com</p>
-      <p>32</p>
+    <div className="container">
+      <Profile
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
+      />
     </div>
   );
 };
-
-function App() {
-  return (
-    <p>
-      App
-      <Profile />
-    </p>
-  );
-}
 
 export default App;
